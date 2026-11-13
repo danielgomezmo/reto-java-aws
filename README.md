@@ -38,3 +38,7 @@ http://localhost:8080
 - [ ] Infraestructura con Terraform
 - [ ] Despliegue en AWS ECS
 - [ ] Automatizacion con GitHub Actions
+
+## Autor
+
+Proyecto realizado como parte de un reto tecnico DevOps.
