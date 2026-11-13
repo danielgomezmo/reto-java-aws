@@ -1,0 +1,15 @@
+
+# Archivos generados por Maven
+target/
+
+# Archivos compilados de Java
+*.class
+
+# Configuraciones locales
+.vscode/
+.idea/
+
+# Archivos privados
+.env
+.env.*
+*.pem
