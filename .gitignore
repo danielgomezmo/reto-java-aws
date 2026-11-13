@@ -13,3 +13,12 @@ target/
 .env
 .env.*
 *.pem
+
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfvars
+crash.log
