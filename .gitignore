@@ -21,4 +21,5 @@ target/
 *.tfstate.*
 *.tfplan
 *.tfvars
+*.tfvars.json
 crash.log

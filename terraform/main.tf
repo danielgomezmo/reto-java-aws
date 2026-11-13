@@ -10,6 +10,8 @@ terraform {
       version = "~> 6.0"
     }
   }
+
+  backend "s3" {}
 }
 
 provider "aws" {
@@ -115,7 +117,7 @@ resource "aws_ecs_task_definition" "app" {
   container_definitions = jsonencode([
     {
       name      = "hola-mundo"
-      image     = "${data.aws_ecr_repository.app.repository_url}:1.0"
+      image     = "${data.aws_ecr_repository.app.repository_url}:${var.image_tag}"
       essential = true
 
       portMappings = [
@@ -173,5 +175,11 @@ output "service_name" {
 }
 
 output "image_uri" {
-  value = "${data.aws_ecr_repository.app.repository_url}:1.0"
+  value = "${data.aws_ecr_repository.app.repository_url}:${var.image_tag}"
+}
+
+variable "image_tag" {
+  description = "Version de la imagen Docker"
+  type        = string
+  default     = "1.0"
 }
